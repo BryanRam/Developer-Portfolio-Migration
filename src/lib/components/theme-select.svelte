@@ -4,7 +4,7 @@
 		class="pr-9 select select-bordered select-primary bg-base-100 select-xs text-base-content"
 	>
 		<option disabled="disabled" selected="selected">Choose a theme</option>
-		<option value="acid">Acid</option>
+		<!-- <option value="acid">Acid</option>
 		<option value="aqua">Aqua</option>
 		<option value="autumn">Autumn</option>
 		<option value="black">Black</option>
@@ -14,9 +14,9 @@
 		<option value="coffee">Coffee</option>
 		<option value="corporate">Corporate</option>
 		<option value="cupcake">Cupcake</option>
-		<option value="cyberpunk">Cyberpunk</option>
+		<option value="cyberpunk">Cyberpunk</option> -->
 		<option value="dark">Dark</option>
-		<option value="dracula">Dracula</option>
+		<!-- <option value="dracula">Dracula</option>
 		<option value="emerald">Emerald</option>
 		<option value="fantasy">Fantasy</option>
 		<option value="forest">Forest</option>
@@ -32,6 +32,7 @@
 		<option value="synthwave">Synthwave</option>
 		<option value="valentine">Valentine</option>
 		<option value="winter">Winter</option>
-		<option value="wireframe">Wireframe</option>
+		<option value="wireframe">Wireframe</option> -->
+		<option value="mytheme">My Theme</option>
 	</select>
 </div>
