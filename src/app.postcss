@@ -22,3 +22,60 @@
 	stop-color: var(--grad2);
 	transition: all 0.3 ease-in-out;
 }
+
+div.project-wrapper {
+	position: relative;
+}
+
+div.project-wrapper:before {
+	content: ' ';
+	width: 90px;
+	height: 90px;
+	background: linear-gradient(135deg, var(--grad1) 0%, var(--grad2) 50%, var(--grad1) 100%);
+	opacity: 1;
+	border-top-left-radius: 8px;
+	transition: all 0.3s ease-in-out;
+	position: absolute;
+	top: -2px;
+	bottom: 0;
+	left: -2px;
+}
+
+div.project-wrapper:after {
+	content: ' ';
+	width: 90px;
+	height: 90px;
+	background: linear-gradient(135deg, var(--grad2) 0%, var(--grad1) 50%, var(--grad2) 100%);
+	opacity: 0;
+	border-top-left-radius: 8px;
+	transition: all 0.3s ease-in-out;
+	position: absolute;
+	top: -2px;
+	bottom: 0;
+	left: -2px;
+}
+
+.project-wrapper div {
+	z-index: 1;
+	background: #004687;
+	border-top-left-radius: 7px;
+	flex-direction: column;
+	margin-left: 0;
+	padding: 30px 30px 0;
+	display: flex;
+	position: relative;
+}
+
+span.main-message:before {
+	content: ' ';
+	width: 2px;
+	background: linear-gradient(0deg, var(--grad2) 0%, var(--grad1) 100%);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: -30px;
+}
+
+.main-message {
+	position: relative;
+}

@@ -12,7 +12,7 @@
 
 <Navbar />
 
-<main class="container max-w-7xl mx-auto px-4 mb-20 relative">
+<main class="container max-w-7xl mx-auto px-0 mb-20 relative">
 	<slot />
 </main>
 
