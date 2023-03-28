@@ -5,6 +5,32 @@
 
 	const { projects } = data.props;
 	const { authors } = data.props;
+	let sProject : any;
+	let isDefault = true;
+	let projectSelected = false;
+
+	function selectProject(slug: any)
+	{
+		console.log(slug);
+
+		console.log(projects);
+
+		sProject = projects.find((arr: { slug: any; }) => arr.slug === slug);
+
+		console.log("slug: " + slug + " SProject:");
+		console.log(sProject);
+
+		isDefault = false;
+		//projectSelected = true;
+	}
+
+	function selectHome()
+	{
+		sProject = null;
+
+		isDefault = true;
+		//projectSelected = false;
+	}
 </script>
 
 <svelte:head>
@@ -12,7 +38,7 @@
 </svelte:head>
 
 <!-- <h1 class="font-bold text-center mb-20 text-5xl">Welcome to my Portfolio</h1> -->
-<div style="max-height: 791px;">
+<div style="/*max-height: 791px;*/">
 
 	<div class="relative">
 	<svg class="absolute" width="300" height="300" data-name="corner-top-left" xmlns="http://www.w3.org/2000/svg" style="pointer-events:none; top:0;left:0;transition:all ease-in-out;" data-inlinesvg=".inlineSvgFile-1"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0" class="gradient1"></stop><stop offset=".5" class="gradient2"></stop><stop offset="1" class="gradient1"></stop></linearGradient></defs><path fill="url('#grad1')" d="M8 0h292l-20 20H25a5 5 0 0 0-5 5v255L0 300V8a8 8 0 0 1 8-8Z"></path></svg>
@@ -20,15 +46,15 @@
 
 	<div class="p-8">
 		<div class="flex flex-col justify-items-center">
-			<div class="mb-32 ml-4 mt-4">
-				<p>Portfolio and Blog</p>
-			</div>
+			<header class="mb-32 ml-4 mt-4">
+				<p on:click={selectHome}>Portfolio and Blog</p>
+			</header>
 
-			<div class="flex flex-row mb-40 items-end pl-12 gap-12">
+			<div class="flex flex-row mb-40 items-end pl-12 gap-15 mx-12">
 				<div class="w-3/4">
 					
 
-					
+					{#if (isDefault)}
 					<!-- <p>Test</p> -->
 					{#each authors as { name, intro, picture: { url } }}
 						<div class="flex">
@@ -44,13 +70,31 @@
 							<img class="mask mask-squircle h-48" src={url} alt={name} />
 						</div>
 					{/each}
+					{:else}
+						<div class="flex">
+							<div class="mr-6">
+								
+								
+								<span class="main-message">
+									<h2 class="text-3xl mb-4 font-bold tracking-wider">{sProject.name}</h2>
+									<!-- <p class="text-xl mb-4">{sProject.description}</p> -->
+									<a href="/projects/{sProject.slug}"> View </a>
+									<a href="{sProject.sourceCode}"> Source </a>
+								</span>
+							</div>
+
+							
+						</div>
+					{/if}
+					
 				</div>
 				<div class="flex flex-col w-1/4 pr-12">
 					<h2 class="my-8" style="font-size:30px;font-weight:100;">Projects</h2>
 					<div class="project-wrapper">
 						<div>
 						{#each projects as { name, slug }}
-						<a class="mb-3" href="/projects/{slug}"><p>{name}</p></a>		
+						<!-- <a class="mb-3" href="/projects/{slug}"><p>{name}</p></a>		 -->
+						<a class="mb-3" on:click={() => selectProject(slug)}><p>{name}</p></a>		
 						{/each}
 						</div>
 					</div>
