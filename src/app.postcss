@@ -2,3 +2,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+	font-family: 'Montserrat-Regular';
+	src: url('lib/assets/Montserrat/static/Montserrat-Regular.ttf');
+}
+
+:root {
+	--grad1: rgb(79, 56, 206);
+	--grad2: rgb(154, 138, 106);
+}
+
+.gradient1 {
+	stop-color: var(--grad1);
+	transition: all 0.3s ease-in-out;
+}
+
+.gradient2 {
+	stop-color: var(--grad2);
+	transition: all 0.3 ease-in-out;
+}

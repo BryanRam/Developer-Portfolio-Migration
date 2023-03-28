@@ -15,16 +15,16 @@
 <div style="max-height: 791px;">
 
 	<div class="relative">
-	<svg class="absolute" width="300" height="300" data-name="corner-top-left" xmlns="http://www.w3.org/2000/svg" style="pointer-events:none; top:0;left:0;" data-inlinesvg=".inlineSvgFile-1"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0" class="gradient1"></stop><stop offset=".5" class="gradient2"></stop><stop offset="1" class="gradient1"></stop></linearGradient></defs><path fill="url('#grad1')" d="M8 0h292l-20 20H25a5 5 0 0 0-5 5v255L0 300V8a8 8 0 0 1 8-8Z"></path></svg>
+	<svg class="absolute" width="300" height="300" data-name="corner-top-left" xmlns="http://www.w3.org/2000/svg" style="pointer-events:none; top:0;left:0;transition:all ease-in-out;" data-inlinesvg=".inlineSvgFile-1"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0" class="gradient1"></stop><stop offset=".5" class="gradient2"></stop><stop offset="1" class="gradient1"></stop></linearGradient></defs><path fill="url('#grad1')" d="M8 0h292l-20 20H25a5 5 0 0 0-5 5v255L0 300V8a8 8 0 0 1 8-8Z"></path></svg>
 	</div>
 
 	<div class="p-8">
 		<div class="flex flex-col justify-items-center">
 			<div>
-				<p>Robin</p>
+				<p>Portfolio and Blog</p>
 			</div>
 
-			<div class="flex flex-row mb-40 items-end pl-12">
+			<div class="flex flex-row mb-40 items-end pl-12 gap-12">
 				<div class="w-3/4">
 					
 
@@ -41,12 +41,12 @@
 						</div>
 					{/each}
 				</div>
-				<div class="flex flex-col w-1/4">
+				<div class="flex flex-col w-1/4 pr-12">
 					<h2 class="my-8" style="font-size:30px;font-weight:100;">Projects</h2>
-					<p>Test</p>
-					<p>Test</p>
-					<p>Test</p>
-					<p>Test</p>
+					{#each projects as { name, slug }}
+					<a href="/projects/{slug}"><p>{name}</p></a>		
+					{/each}
+					
 				</div>
 			</div>
 
