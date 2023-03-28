@@ -50,7 +50,7 @@
 					<div class="project-wrapper">
 						<div>
 						{#each projects as { name, slug }}
-						<a href="/projects/{slug}"><p>{name}</p></a>		
+						<a class="mb-3" href="/projects/{slug}"><p>{name}</p></a>		
 						{/each}
 						</div>
 					</div>
