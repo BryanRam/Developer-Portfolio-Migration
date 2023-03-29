@@ -61,7 +61,7 @@ div.project-wrapper:after {
 
 .project-wrapper div {
 	z-index: 1;
-	background: #004687;
+	background: hsl(var(--b1));
 	border-top-left-radius: 7px;
 	flex-direction: column;
 	margin-left: 0;
@@ -97,6 +97,38 @@ div.project-wrapper div a {
 
 div.project-wrapper div a:hover {
 	letter-spacing: 1px;
+}
+
+div.project-wrapper div a span {
+	position: relative;
+}
+
+div.project-wrapper div a span:before {
+	content: '';
+	height: 1px;
+	width: 100%;
+	background: linear-gradient(270deg, var(--grad2) 0%, var(--grad1) 100%);
+	opacity: 1;
+	transition: all 0.3s ease-in-out;
+	display: inline-block;
+	position: absolute;
+	bottom: -3px;
+	left: 0;
+	right: 0;
+}
+
+div.project-wrapper div a span:after {
+	content: '';
+	height: 1px;
+	width: 100%;
+	background: linear-gradient(270deg, var(--grad1) 0%, var(--grad2) 100%);
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+	display: inline-block;
+	position: absolute;
+	bottom: -3px;
+	left: 0;
+	right: 0;
 }
 
 section {
@@ -137,4 +169,43 @@ section {
 	background-color: #3c31dd;
 	transform: translate(-4%, 40%);
 	z-index: -1;
+}
+
+.individual-project {
+	transform-origin: 100%;
+	width: 0%;
+	transition: all 0.2s linear;
+	transform: scaleX(0);
+	opacity: 0;
+}
+
+.individual-project-scale {
+	transform-origin: 100%;
+	width: 100%;
+	transition: all 0.2s linear;
+	transform: scaleX(1);
+	opacity: 1;
+}
+
+.project-link {
+	position: relative;
+	margin-right: 25px;
+}
+
+button.project-link a:after {
+	content: '';
+	height: 2px;
+
+	background: linear-gradient(270deg, var(--grad2) 0%, var(--grad1) 100%);
+	opacity: 1;
+	transition: all 0.3s ease-in-out;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+button.project-link a:hover:after {
+	background: linear-gradient(270deg, var(--grad1) 0%, var(--grad2) 100%);
 }

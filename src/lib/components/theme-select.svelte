@@ -15,7 +15,7 @@
 		<option value="corporate">Corporate</option>
 		<option value="cupcake">Cupcake</option>
 		<option value="cyberpunk">Cyberpunk</option> -->
-		<option value="dark">Dark</option>
+		<option value="tokyonightlight">Light</option>
 		<!-- <option value="dracula">Dracula</option>
 		<option value="emerald">Emerald</option>
 		<option value="fantasy">Fantasy</option>
@@ -33,6 +33,6 @@
 		<option value="valentine">Valentine</option>
 		<option value="winter">Winter</option>
 		<option value="wireframe">Wireframe</option> -->
-		<option value="mytheme">My Theme</option>
+		<option value="tokyonightdark">Dark</option>
 	</select>
 </div>

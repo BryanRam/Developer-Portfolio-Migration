@@ -18,16 +18,18 @@ const config = {
 
 	daisyui: {
 		themes: [{
-				mytheme: {
-					primary: "#00ffd2",
-					secondary: "#ff4499",
-					accent: "#000000",
-					neutral: "#0a0047",
-					"base-100": "#004687",
+				tokyonightdark: {
+					primary: "#2ac3de",
+					secondary: "#7aa2f7",
+					accent: "#a9b1d6",
+					neutral: "#9aa5ce",
+					"base-100": "#1a1b26",
+				},
+				tokyonightlight: {
+					"base-100": "#d5d6db",
 				},
 			},
-			"dark",
-			"cupcake",
+
 		],
 	},
 
