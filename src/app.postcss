@@ -171,6 +171,46 @@ section {
 	z-index: -1;
 }
 
+.wave-top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+}
+
+.wave-top svg {
+	position: relative;
+	display: block;
+	width: calc(100% + 1.3px);
+	height: 200px;
+}
+
+.wave-top .shape-fill {
+	fill: #9aa5ce;
+}
+
+.wave-bottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+}
+
+.wave-bottom svg {
+	position: relative;
+	display: block;
+	width: calc(100% + 1.3px);
+	height: 180px;
+}
+
+.wave-bottom .shape-fill {
+	fill: #9aa5ce;
+}
+
 .individual-project {
 	transform-origin: 100%;
 	width: 0%;
@@ -210,6 +250,14 @@ button.project-link a:hover:after {
 	background: linear-gradient(270deg, var(--grad1) 0%, var(--grad2) 100%);
 }
 
+header div p {
+	transition: all 0.2s ease-in-out;
+}
+
+header div p:hover {
+	letter-spacing: 1px;
+}
+
 header ul a {
 	margin-left: 30px;
 }
@@ -222,9 +270,13 @@ header ul a svg {
 	transform: scale(1.01);
 }
 
+header ul a svg:hover {
+	transform: scale(1.2);
+}
+
 .github svg,
-.email svg,
+.terminal svg,
 .resume svg,
 .linkedin svg {
-	fill: #777;
+	fill: #9aa5ce;
 }
