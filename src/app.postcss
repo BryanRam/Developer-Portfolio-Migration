@@ -23,6 +23,10 @@
 	transition: all 0.3 ease-in-out;
 }
 
+body {
+	overflow: hidden;
+}
+
 header {
 	cursor: pointer;
 }
@@ -188,7 +192,7 @@ section {
 }
 
 .wave-top .shape-fill {
-	fill: #9aa5ce;
+	fill: hsl(var(--a));
 }
 
 .wave-bottom {
@@ -208,7 +212,48 @@ section {
 }
 
 .wave-bottom .shape-fill {
-	fill: #9aa5ce;
+	fill: hsl(var(--a));
+}
+
+/*
+.wave-bottom,
+.wave-top {
+	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+	width: 6400px;
+	height: 198px;
+	animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+	transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+	top: -175px;
+	animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
+		swell 7s ease -1.25s infinite;
+	opacity: 1;
+}
+
+@keyframes wave {
+	0% {
+		margin-left: 0;
+	}
+	100% {
+		margin-left: -1600px;
+	}
+}
+
+@keyframes swell {
+	0%,
+	100% {
+		transform: translate3d(0, -25px, 0);
+	}
+	50% {
+		transform: translate3d(0, 5px, 0);
+	}
+}
+*/
+
+#welcome_path {
+	fill: hsl(var(--bc));
 }
 
 .individual-project {
@@ -250,6 +295,14 @@ button.project-link a:hover:after {
 	background: linear-gradient(270deg, var(--grad1) 0%, var(--grad2) 100%);
 }
 
+button.project-link a {
+	transition: all 0.3s ease-in-out;
+}
+
+button.project-link a:hover {
+	color: hsl(var(--p));
+}
+
 header div p {
 	transition: all 0.2s ease-in-out;
 }
@@ -278,5 +331,21 @@ header ul a svg:hover {
 .terminal svg,
 .resume svg,
 .linkedin svg {
-	fill: #9aa5ce;
+	fill: hsl(var(--a));
+}
+
+.inner-container:hover svg.corner-top-left .gradient1 {
+	stop-color: var(--grad2);
+}
+
+.inner-container:hover svg.corner-top-left .gradient2 {
+	stop-color: var(--grad1);
+}
+
+.inner-container:hover svg.corner-bottom-right .gradient1 {
+	stop-color: var(--grad2);
+}
+
+.inner-container:hover svg.corner-bottom-right .gradient2 {
+	stop-color: var(--grad1);
 }

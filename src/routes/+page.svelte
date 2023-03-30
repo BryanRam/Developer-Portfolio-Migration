@@ -63,10 +63,13 @@
 </svelte:head>
 
 <!-- <h1 class="font-bold text-center mb-20 text-5xl">Welcome to my Portfolio</h1> -->
-<div class="" style="/*max-height: 791px;*/ --grad1:{randomColor1}; --grad2:{randomColor2}">
+<div
+	class="inner-container"
+	style="/*max-height: 791px;*/ --grad1:{randomColor1}; --grad2:{randomColor2}"
+>
 	<div class="relative">
 		<svg
-			class="absolute"
+			class="absolute corner-top-left"
 			width="300"
 			height="300"
 			data-name="corner-top-left"
@@ -89,7 +92,7 @@
 
 	<div class="p-8">
 		<div class="flex flex-col justify-items-center">
-			<header class="mb-32 ml-4 mt-4 flex flex-row">
+			<header class="mb-3 lg:mb-32 ml-4 mt-4 flex flex-row">
 				<div class="w-4/5">
 					<p on:click={selectHome}>Portfolio and Blog</p>
 				</div>
@@ -97,7 +100,7 @@
 				<IconsNav />
 			</header>
 
-			<div class="flex flex-row mb-40 items-end pl-12 gap-15 mx-12">
+			<div class="flex flex-col lg:flex-row mb-40 items-start lg:items-end pl-12 gap-15 lg:mx-12">
 				<div class="w-3/4">
 					<div class="flex">
 						{#if isDefault}
@@ -115,7 +118,7 @@
 											data-inlinesvg=".inlineSvgFile-7"
 											><path
 												id="welcome_path"
-												style="stroke-dasharray: 9541.93, 9541.93; stroke-dashoffset: 7156; transition: fill 1s ease-in-out 0s; stroke: rgb(204, 204, 204); fill: rgb(204, 204, 204);"
+												style="stroke-dasharray: 9541.93, 9541.93; stroke-dashoffset: 7156; transition: fill 1s ease-in-out 0s; stroke: rgb(204, 204, 204);"
 												stroke="none"
 												stroke-miterlimit="10"
 												stroke-width="2"
@@ -171,7 +174,7 @@
 				</div>
 			</div>
 
-			<div class="absolute" style="bottom:70px;right:70px;">
+			<div class="absolute bottom-24 right-24 lg:bottom-20 lg:right-20">
 				<p>
 					Copyright &copy; {`${new Date().getFullYear()}`} - All right reserved by Robin Lee
 				</p>
@@ -180,7 +183,7 @@
 
 		<div class="relative">
 			<svg
-				class="absolute"
+				class="absolute corner-bottom-right"
 				width="300"
 				height="300"
 				data-name="corner-bottom-right"
