@@ -12,15 +12,13 @@
 </div> -->
 
 <div>
-	🌞
 	<div class="inline-block w-10">
 		<span
 			data-toggle-theme="tokyonightlight, tokyonightdark"
 			data-act-class="pl-4"
-			class="border rounded-full border-green-700 flex items-center cursor-pointer w-10 transition-all duration-300 ease-in-out pl-0"
+			class="border rounded-full border-teal-500 flex items-center cursor-pointer w-10 transition-all duration-300 ease-in-out pl-0"
 		>
 			<span class="rounded-full w-3 h-3 m-1 bg-base-300" />
 		</span>
 	</div>
-	🌚
 </div>
