@@ -43,8 +43,5 @@
 		"vite": "^4.0.0",
 		"vitest": "^0.25.3"
 	},
-	"type": "module",
-	"dependencies": {
-		"kute.js": "^2.2.4"
-	}
+	"type": "module"
 }

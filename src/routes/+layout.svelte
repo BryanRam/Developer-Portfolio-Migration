@@ -4,18 +4,10 @@
 	import { onMount } from 'svelte';
 	import { themeChange } from 'theme-change';
 	import '../app.postcss';
-	import KUTE from 'kute.js';
 
 	onMount(async () => {
 		themeChange(false);
 	});
-
-	// const tween = KUTE.fromTo(
-	// 	'#wave1',
-	// 	{ path: '#wave1' },
-	// 	{ path: '#wave2' },
-	// 	{ repeat: 999, duration: 3000, yoyo: true }
-	// ).start();
 </script>
 
 <Navbar />
