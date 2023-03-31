@@ -2,3 +2,392 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+	font-family: 'Montserrat-Regular';
+	src: url('lib/assets/Montserrat/static/Montserrat-Regular.ttf');
+}
+
+:root {
+	--grad1: rgb(79, 56, 206);
+	--grad2: rgb(154, 138, 106);
+}
+
+.gradient1 {
+	stop-color: var(--grad1);
+	transition: all 0.3s ease-in-out;
+}
+
+.gradient2 {
+	stop-color: var(--grad2);
+	transition: all 0.3 ease-in-out;
+}
+
+header {
+	cursor: pointer;
+}
+
+div.project-wrapper {
+	position: relative;
+}
+
+div.project-wrapper:before {
+	content: ' ';
+	width: 90px;
+	height: 90px;
+	background: linear-gradient(135deg, var(--grad1) 0%, var(--grad2) 50%, var(--grad1) 100%);
+	opacity: 1;
+	border-top-left-radius: 8px;
+	transition: all 0.3s ease-in-out;
+	position: absolute;
+	top: -2px;
+	bottom: 0;
+	left: -2px;
+}
+
+div.project-wrapper:after {
+	content: ' ';
+	width: 90px;
+	height: 90px;
+	background: linear-gradient(135deg, var(--grad2) 0%, var(--grad1) 50%, var(--grad2) 100%);
+	opacity: 0;
+	border-top-left-radius: 8px;
+	transition: all 0.3s ease-in-out;
+	position: absolute;
+	top: -2px;
+	bottom: 0;
+	left: -2px;
+}
+
+.project-wrapper div {
+	z-index: 1;
+	background: hsl(var(--b1));
+	border-top-left-radius: 7px;
+	flex-direction: column;
+	margin-left: 0;
+	padding: 30px 30px 0;
+	display: flex;
+	position: relative;
+}
+
+span.main-message:before {
+	content: ' ';
+	width: 2px;
+	background: linear-gradient(0deg, var(--grad2) 0%, var(--grad1) 100%);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: -30px;
+}
+
+.main-message {
+	position: relative;
+}
+
+div.project-wrapper div a {
+	transition: all 0.3s ease-in-out;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+	transition-property: all;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+}
+
+div.project-wrapper div a:hover {
+	letter-spacing: 1px;
+}
+
+div.project-wrapper div a span {
+	position: relative;
+}
+
+div.project-wrapper div a span:before {
+	content: '';
+	height: 2.5px;
+	width: 100%;
+	background: linear-gradient(270deg, var(--grad2) 0%, var(--grad1) 100%);
+	opacity: 1;
+	transition: all 0.3s ease-in-out;
+	display: inline-block;
+	position: absolute;
+	bottom: -3px;
+	left: 0;
+	right: 0;
+}
+
+div.project-wrapper div a span:after {
+	content: '';
+	height: 2.5px;
+	width: 100%;
+	background: linear-gradient(270deg, var(--grad1) 0%, var(--grad2) 100%);
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+	display: inline-block;
+	position: absolute;
+	bottom: -3px;
+	left: 0;
+	right: 0;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 400px;
+	padding-top: 100px;
+	background: #3c31dd;
+}
+
+.curve {
+	position: absolute;
+	height: 250px;
+	width: 100%;
+	bottom: 0;
+	text-align: center;
+}
+
+.curve::before {
+	content: '';
+	display: block;
+	position: absolute;
+	border-radius: 100% 50%;
+	width: 55%;
+	height: 100%;
+	transform: translate(85%, 60%);
+	background-color: hsl(216, 21%, 16%);
+}
+
+.curve::after {
+	content: '';
+	display: block;
+	position: absolute;
+	border-radius: 100% 50%;
+	width: 55%;
+	height: 100%;
+	background-color: #3c31dd;
+	transform: translate(-4%, 40%);
+	z-index: -1;
+}
+
+.wave-top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+}
+
+.wave-top svg {
+	position: relative;
+	display: block;
+	width: calc(100% + 1.3px);
+	height: 200px;
+}
+
+svg.shape-fill {
+	fill: hsl(var(--a));
+}
+
+.wave-top .shape-fill {
+	fill: hsl(var(--a));
+}
+
+.wave-bottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+	/*background: url('lib/components/wave/bottom-wave.svg') repeat-x;*/
+}
+
+.wave-bottom svg {
+	position: relative;
+	display: block;
+	width: calc(100% + 1.3px);
+	height: 180px;
+}
+
+.wave-bottom .shape-fill {
+	fill: hsl(var(--a));
+}
+
+/*Code for Movable Waves */
+/* 
+.wave-bottom,
+.wave-top {
+	width: 6400px;
+
+	animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+	transform: translate3d(0, 0, 0);
+}
+
+@keyframes wave {
+	0% {
+		margin-left: 0;
+	}
+	100% {
+		margin-left: -1600px;
+	}
+}
+
+@keyframes swell {
+	0%,
+	100% {
+		transform: translate3d(0, -25px, 0);
+	}
+	50% {
+		transform: translate3d(0, 15px, 0);
+	}
+}
+*/
+
+#welcome_path {
+	fill: hsl(var(--bc));
+}
+
+.individual-project {
+	transform-origin: 100%;
+	width: 0%;
+	transition: all 0.2s linear;
+	transform: scaleX(0);
+	opacity: 0;
+}
+
+.individual-project-scale {
+	transform-origin: 100%;
+	width: 100%;
+	transition: all 0.2s linear;
+	transform: scaleX(1);
+	opacity: 1;
+}
+
+.project-link {
+	position: relative;
+	margin-right: 25px;
+}
+
+button.project-link a:after {
+	content: '';
+	height: 2px;
+
+	background: linear-gradient(270deg, var(--grad2) 0%, var(--grad1) 100%);
+	opacity: 1;
+	transition: all 0.3s ease-in-out;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+button.project-link a:hover:after {
+	background: linear-gradient(270deg, var(--grad1) 0%, var(--grad2) 100%);
+}
+
+button.project-link a {
+	transition: all 0.3s ease-in-out;
+}
+
+button.project-link a:hover {
+	color: hsl(var(--a));
+}
+
+header div p {
+	transition: all 0.2s ease-in-out;
+}
+
+header div p:hover {
+	letter-spacing: 1px;
+}
+
+header ul a {
+	margin-left: 30px;
+}
+
+header ul a svg {
+	width: 25px;
+	height: 25px;
+	margin-top: -15px;
+	transition: transform 0.2s ease-in-out;
+	transform: scale(1.01);
+}
+
+header ul a svg:hover {
+	transform: scale(1.2);
+}
+
+.github svg,
+.terminal svg,
+.resume svg,
+.linkedin svg {
+	fill: hsl(var(--a));
+}
+
+.inner-container:hover svg.corner-top-left .gradient1 {
+	stop-color: var(--grad2);
+}
+
+.inner-container:hover svg.corner-top-left .gradient2 {
+	stop-color: var(--grad1);
+}
+
+.inner-container:hover svg.corner-bottom-right .gradient1 {
+	stop-color: var(--grad2);
+}
+
+.inner-container:hover svg.corner-bottom-right .gradient2 {
+	stop-color: var(--grad1);
+}
+
+.project-body {
+	max-height: 300px;
+}
+
+@media (max-width: 900px) {
+	.wave-bottom {
+		bottom: -60px;
+	}
+
+	.wave-top {
+		top: -60px;
+	}
+
+	.project-wrapper div {
+		padding: 20px 30px 0;
+	}
+}
+
+@media (max-width: 500px) {
+	.xs-mb-23 {
+		margin-bottom: 7em;
+	}
+
+	svg.corner-bottom-right {
+		display: none;
+	}
+
+	.wave-bottom {
+		display: none;
+	}
+}
+
+@media (min-width: 768px) {
+	.project-body {
+		max-height: 300px;
+	}
+}
+
+@media (min-width: 1024px) {
+	div.project-wrapper div a span:before {
+		height: 2px;
+	}
+
+	div.project-wrapper div a span:after {
+		height: 2px;
+	}
+}

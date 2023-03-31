@@ -2,12 +2,12 @@
 	import ThemeSelect from './theme-select.svelte';
 </script>
 
-<div class="navbar mb-16 shadow-lg bg-neutral text-neutral-content sticky top-0 z-10">
+<div class="navbar lg:mb-12 sticky top-0 z-10">
 	<div class="flex-1 px-2 mx-2">
-		<a class="text-lg font-bold" href="/"> Portfolio and Blog </a>
+		<!-- <a class="text-lg font-bold" href="/"> Portfolio and Blog </a> -->
 	</div>
 
-	<div class="dropdown dropdown-left lg:hidden">
+	<!-- <div class="dropdown dropdown-left lg:hidden">
 		<div class="m-1 btn">Links</div>
 		<ul class="bg-neutral rounded-box shadow text-neutral-content p-2 w-52 menu dropdown-content ">
 			<a class="btn btn-ghost btn-sm rounded-btn" href="/projects"> Portfolio </a>
@@ -19,18 +19,18 @@
 			</a>
 			<a class="btn btn-ghost btn-sm rounded-btn" href="/about"> About </a>
 		</ul>
-	</div>
+	</div> -->
 
-	<div class="flex-none hidden px-2 mx-2 lg:flex">
+	<div class="flex-none px-2 mx-2 lg:flex">
 		<div class="flex items-stretch">
-			<a class="btn btn-ghost btn-sm rounded-btn" href="/projects"> Portfolio </a>
+			<!-- <a class="btn btn-ghost btn-sm rounded-btn" href="/projects"> Portfolio </a>
 			<a
 				class="btn btn-ghost btn-sm rounded-btn"
 				href="https://media.graphassets.com/CsozvxWJSAuZ1KcQvGfg"
 			>
 				Resume
 			</a>
-			<a class="btn btn-ghost btn-sm rounded-btn" href="/about"> About </a>
+			<a class="btn btn-ghost btn-sm rounded-btn" href="/about"> About </a> -->
 			<div class="px-4">
 				<ThemeSelect />
 			</div>
