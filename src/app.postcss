@@ -23,10 +23,6 @@
 	transition: all 0.3 ease-in-out;
 }
 
-body {
-	overflow: hidden;
-}
-
 header {
 	cursor: pointer;
 }
@@ -191,6 +187,10 @@ section {
 	height: 200px;
 }
 
+svg.shape-fill {
+	fill: hsl(var(--a));
+}
+
 .wave-top .shape-fill {
 	fill: hsl(var(--a));
 }
@@ -202,6 +202,7 @@ section {
 	width: 100%;
 	overflow: hidden;
 	line-height: 0;
+	/*background: url('lib/components/wave/bottom-wave.svg') repeat-x;*/
 }
 
 .wave-bottom svg {
@@ -218,18 +219,11 @@ section {
 /*
 .wave-bottom,
 .wave-top {
-	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+	
 	width: 6400px;
 	height: 198px;
 	animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
 	transform: translate3d(0, 0, 0);
-}
-
-.wave:nth-of-type(2) {
-	top: -175px;
-	animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
-		swell 7s ease -1.25s infinite;
-	opacity: 1;
 }
 
 @keyframes wave {
@@ -247,10 +241,9 @@ section {
 		transform: translate3d(0, -25px, 0);
 	}
 	50% {
-		transform: translate3d(0, 5px, 0);
+		transform: translate3d(0, 15px, 0);
 	}
-}
-*/
+}*/
 
 #welcome_path {
 	fill: hsl(var(--bc));
@@ -348,4 +341,18 @@ header ul a svg:hover {
 
 .inner-container:hover svg.corner-bottom-right .gradient2 {
 	stop-color: var(--grad1);
+}
+
+@media (max-width: 900px) {
+	.wave-bottom {
+		bottom: -60px;
+	}
+
+	.wave-top {
+		top: -60px;
+	}
+
+	.project-wrapper div {
+		padding: 20px 30px 0;
+	}
 }

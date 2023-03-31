@@ -2,7 +2,7 @@
 	import ThemeSelect from './theme-select.svelte';
 </script>
 
-<div class="navbar mb-16 sticky top-0 z-10">
+<div class="navbar lg:mb-12 sticky top-0 z-10">
 	<div class="flex-1 px-2 mx-2">
 		<!-- <a class="text-lg font-bold" href="/"> Portfolio and Blog </a> -->
 	</div>
