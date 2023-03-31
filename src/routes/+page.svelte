@@ -112,7 +112,9 @@
 				<IconsNav />
 			</header>
 
-			<div class="flex flex-col lg:flex-row lg:mb-20 xl:mb-24 items-start pl-12 gap-15 lg:mx-12">
+			<div
+				class="flex flex-col lg:flex-row xs-mb-23 lg:mb-20 xl:mb-24 items-start pl-12 gap-15 lg:mx-12"
+			>
 				<div class="w-3/4">
 					<div class="flex" style="max-height:300px;">
 						<!-- {#if isDefault} -->
