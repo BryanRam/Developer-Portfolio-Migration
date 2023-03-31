@@ -105,7 +105,7 @@
 	<div class="p-8">
 		<div class="flex flex-col justify-items-center">
 			<header class="mb-3 lg:mb-4 2xl:mb-24 ml-4 mt-4 flex flex-row">
-				<div class="w-4/5">
+				<div class="w-4/5 text-3xl md:text-base">
 					<p on:click={selectHome}>Portfolio and Blog</p>
 				</div>
 
@@ -113,10 +113,10 @@
 			</header>
 
 			<div
-				class="flex flex-col lg:flex-row xs-mb-23 lg:mb-20 xl:mb-24 items-start pl-12 gap-15 lg:mx-12"
+				class="flex flex-col mt-6 md:mt-0 lg:flex-row xs-mb-23 lg:mb-20 xl:mb-24 items-start pl-12 gap-15 lg:mx-12"
 			>
-				<div class="w-3/4">
-					<div class="flex" style="max-height:300px;">
+				<div class="w-4/4 md:w-3/4">
+					<div class="flex project-body">
 						<!-- {#if isDefault} -->
 						<!-- <p>Test</p> -->
 						{#each authors as { name, intro, picture: { url } }}
@@ -142,8 +142,8 @@
 								</div>
 
 								<span class={mainMessageClass}>
-									<h2 class="text-xl mb-4 font-bold tracking-wider">{name}</h2>
-									<p class="text-lg mb-4">{intro}</p>
+									<h2 class="text-3xl md:text-xl mb-4 font-bold tracking-wider">{name}</h2>
+									<p class="text-2xl md:text-lg mb-4">{intro}</p>
 								</span>
 							</div>
 
@@ -161,9 +161,13 @@
 									<span class={mainMessageClass}>
 										<h2 class="text-3xl mb-4 font-bold tracking-wider">{name}</h2>
 										<!-- <p class="text-xl mb-4">{sProject.description}</p> -->
-										<button class="project-link"><a href="/projects/{slug}"> View </a></button>
+										<button class="project-link text-2xl lg:text-base"
+											><a href="/projects/{slug}"> View </a></button
+										>
 
-										<button class="project-link"><a href={sourceCode}> Source </a></button>
+										<button class="project-link text-2xl lg:text-base"
+											><a href={sourceCode}> Source </a></button
+										>
 									</span>
 								</div>
 							{/each}
@@ -172,7 +176,7 @@
 						{/if}
 					</div>
 				</div>
-				<div class="flex flex-col w-1/4 pr-9">
+				<div class="flex flex-col md:w-1/4 w-3/4 pr-9">
 					<h2 class="my-8" style="font-size:30px;font-weight:100;">Projects</h2>
 					<!-- <div class="project-wrapper before:bg-gradient-to-r before:from-[{randomColor1}] before:via-[{randomColor2}] before:to-[{randomColor1}]
 					after:bg-gradient-to-r after:from-[{randomColor2}] after:via-[{randomColor1}] after:to-[{randomColor2}]"> -->
@@ -180,7 +184,9 @@
 						<div>
 							{#each projects as { name, slug }}
 								<!-- <a class="mb-3" href="/projects/{slug}"><p>{name}</p></a>		 -->
-								<a class="mb-1 lg:mb-3" on:click={() => selectProject(slug)}><span>{name}</span></a>
+								<a class="mb-2 lg:mb-3 text-2xl lg:text-base" on:click={() => selectProject(slug)}
+									><span>{name}</span></a
+								>
 							{/each}
 						</div>
 					</div>
