@@ -193,9 +193,9 @@
 				</div>
 			</div>
 
-			<div class="absolute bottom-24 right-24 lg:bottom-20 lg:right-20">
+			<div class="absolute bottom-24 right-24 lg:bottom-20 lg:right-20 text-sm italic">
 				<p>
-					Copyright &copy; {`${new Date().getFullYear()}`} - All right reserved by Robin Lee
+					Copyright &copy; {`${new Date().getFullYear()}`} - All rights reserved by Robin Lee
 				</p>
 			</div>
 		</div>

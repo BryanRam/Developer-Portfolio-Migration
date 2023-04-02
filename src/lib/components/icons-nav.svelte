@@ -55,7 +55,7 @@
 			<a
 				aria-label="resume"
 				data-inlinesvg=".inlineSvgFile-3"
-				href="https://media.graphassets.com/CsozvxWJSAuZ1KcQvGfg"
+				href="https://media.graphassets.com/Bxc5RHZ1SvGR3TsYaNC3"
 			>
 				<svg
 					width="800px"
@@ -73,7 +73,7 @@
 		</li>
 
 		<li class="terminal">
-			<a aria-label="terminal" data-inlinesvg=".inlineSvgFile-3" href="#">
+			<a aria-label="terminal" data-inlinesvg=".inlineSvgFile-3" href="https://term.robinlee.dev">
 				<svg
 					width="800px"
 					height="800px"
