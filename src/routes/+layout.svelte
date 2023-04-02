@@ -65,6 +65,12 @@
 	</svg> -->
 </div>
 
+<main
+	class="container max-w-7xl mx-auto px-0 xl:mb-20 relative pt-6 overflow-x-hidden overflow-y-scroll vheight"
+>
+	<slot />
+</main>
+
 <div class="wave-bottom">
 	<svg
 		width="1600"
@@ -119,9 +125,5 @@
 		/>
 	</svg> -->
 </div>
-
-<main class="container max-w-7xl mx-auto px-0 xl:mb-20 relative pt-6">
-	<slot />
-</main>
 
 <!-- <Footer /> -->
