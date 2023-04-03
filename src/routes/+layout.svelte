@@ -66,7 +66,7 @@
 </div>
 
 <main
-	class="container max-w-7xl mx-auto px-0 xl:mb-20 relative pt-6 overflow-x-hidden overflow-y-scroll vheight"
+	class="container max-w-7xl mx-auto px-8 lg:px-4 xl:mb-20 relative pt-6 overflow-x-hidden overflow-y-scroll vheight"
 >
 	<slot />
 </main>

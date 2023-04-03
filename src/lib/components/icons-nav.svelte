@@ -1,5 +1,5 @@
 <div class="w-2/5 lg:w-1/5">
-	<ul class="flex gap-4">
+	<ul class="flex gap-1 md:gap-2 lg:gap-4">
 		<li class="github">
 			<a aria-label="github" href="https://github.com/sl5035" data-inlinesvg=".inlineSvgFile-6"
 				><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120.78 117.79"
